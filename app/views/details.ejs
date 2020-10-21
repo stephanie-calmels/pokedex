@@ -32,49 +32,49 @@
                         <tr class="table__row">
                             <td class="table__data stat">PV</td>
                             <td class="table__data value"><%= pokemon.pv %></td>
-                            <td class="table__data">
+                            <td class="table__data bars">
                                 <div class="bar"><p></p></div>
-                                <div class="bar bar--full"><p></p></div>
+                                <div class="bar bar--full" style="width:<%= pokemon.pv*100/255 %>%"><p></p></div>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__data stat">Attaque</td>
                             <td class="table__data value"><%= pokemon.attaque %></td>
-                            <td class="table__data">
+                            <td class="table__data bars">
                                 <div class="bar"><p></p></div>
-                                <div class="bar bar--full"><p></p></div>
+                                <div class="bar bar--full" style="width:<%= pokemon.attaque*100/255 %>%"><p></p></div>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__data stat">Défense</td>
                             <td class="table__data value"><%= pokemon.defense %></td>
-                            <td class="table__data">
+                            <td class="table__data bars">
                                 <div class="bar"><p></p></div>
-                                <div class="bar bar--full"><p></p></div>
+                                <div class="bar bar--full" style="width:<%= pokemon.defense*100/255 %>%"><p></p></div>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__data stat">Attaque Spé.</td>
                             <td class="table__data value"><%= pokemon.attaque_spe %></td>
-                            <td class="table__data">
+                            <td class="table__data bars">
                                 <div class="bar"><p></p></div>
-                                <div class="bar bar--full"><p></p></div>
+                                <div class="bar bar--full" style="width:<%= pokemon.attaque_spe*100/255 %>%"><p></p></div>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__data stat">Défense Spé.</td>
                             <td class="table__data value"><%= pokemon.defense_spe %></td>
-                            <td class="table__data">
+                            <td class="table__data bars">
                                 <div class="bar"><p></p></div>
-                                <div class="bar bar--full"><p></p></div>
+                                <div class="bar bar--full" style="width:<%= pokemon.defense_spe*100/255 %>%"><p></p></div>
                             </td>
                         </tr>
                         <tr class="table__row">
                             <td class="table__data stat">Vitesse</td>
                             <td class="table__data value"><%= pokemon.vitesse %></td>
-                            <td class="table__data">
+                            <td class="table__data bars">
                                 <div class="bar"><p></p></div>
-                                <div class="bar bar--full"><p></p></div>
+                                <div class="bar bar--full" style="width:<%= pokemon.vitesse*100/255 %>%"><p></p></div>
                             </td>
                         </tr>                        
                     </tbody>
