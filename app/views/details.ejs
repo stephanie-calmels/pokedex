@@ -1,0 +1,89 @@
+<%- include('./partials/header') %> 
+
+    <div class="content">
+
+            <h2 class="title">Détails de <%= pokemon.nom %></h2>
+
+        <section class="details">
+
+            <article class="image__card">
+
+                <img class="image" src="/img/<%= pokemon.numero %>.png " alt="photo de <%= pokemon.nom %> ">
+
+            </article>
+
+            <article class="card details__card">
+
+                <h3 class="card__title">#<%= pokemon.numero %> <%= pokemon.nom %></h3>
+                <div class="types">
+                    <% types.forEach(element => { %>
+                        <span class="type type--<%= element.type.toLowerCase() %> ">
+                            <%= element.type %> 
+                        </span>                   
+                    <% }) %>
+                </div>
+                <table class="card__table">
+                    <thead>
+                        <tr class="card__subtitle">
+                            <th class="table__data">Statistiques</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table__row">
+                            <td class="table__data stat">PV</td>
+                            <td class="table__data value"><%= pokemon.pv %></td>
+                            <td class="table__data">
+                                <div class="bar"><p></p></div>
+                                <div class="bar bar--full"><p></p></div>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data stat">Attaque</td>
+                            <td class="table__data value"><%= pokemon.attaque %></td>
+                            <td class="table__data">
+                                <div class="bar"><p></p></div>
+                                <div class="bar bar--full"><p></p></div>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data stat">Défense</td>
+                            <td class="table__data value"><%= pokemon.defense %></td>
+                            <td class="table__data">
+                                <div class="bar"><p></p></div>
+                                <div class="bar bar--full"><p></p></div>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data stat">Attaque Spé.</td>
+                            <td class="table__data value"><%= pokemon.attaque_spe %></td>
+                            <td class="table__data">
+                                <div class="bar"><p></p></div>
+                                <div class="bar bar--full"><p></p></div>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data stat">Défense Spé.</td>
+                            <td class="table__data value"><%= pokemon.defense_spe %></td>
+                            <td class="table__data">
+                                <div class="bar"><p></p></div>
+                                <div class="bar bar--full"><p></p></div>
+                            </td>
+                        </tr>
+                        <tr class="table__row">
+                            <td class="table__data stat">Vitesse</td>
+                            <td class="table__data value"><%= pokemon.vitesse %></td>
+                            <td class="table__data">
+                                <div class="bar"><p></p></div>
+                                <div class="bar bar--full"><p></p></div>
+                            </td>
+                        </tr>                        
+                    </tbody>
+                </table>
+
+            </article>
+
+        </section>
+
+    </div>
+
+<%- include('./partials/footer') %> 

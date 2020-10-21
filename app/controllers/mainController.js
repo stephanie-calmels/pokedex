@@ -14,6 +14,29 @@ const mainController = {
             });
         });
     },
+
+    // détails d'un Pokémon
+    pokemonPage: (request, response) => {
+        const pokemonId = parseInt(request.params.id);
+        dataMapper.getOnePokemon(pokemonId, (error, results) => {
+            if (error) {
+                return response.status(500).send(error);
+            }
+            const pokemon = results.rows[0];
+            dataMapper.getPokemonTypes(pokemonId, (error, results) => {
+                if (error) {
+                    return response.status(500).send(error);
+                }
+                const types = results.rows;
+                response.render('details', {
+                    pokemon,
+                    types
+                });
+    
+            })
+        });
+
+    }
 };
 
 // exportation du controller

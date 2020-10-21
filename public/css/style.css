@@ -54,6 +54,7 @@ li {
 }
 
 /* main */
+/* page accueil */
 
 .container {
     display: flex;
@@ -63,9 +64,6 @@ li {
 
 .card {
     background-color: #982c2c;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border-radius: 25px;
     padding: 1rem;
     margin-top: 1rem;
@@ -75,19 +73,190 @@ li {
 .card__img {
     width: 100%;
     background-color: #982c2c;
+}
 
+.card a {
+    background-color: #982c2c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card__title {
     background-color: #982c2c;
     color: #fff;
     font-weight: 400;
+    font-size: 1.5em;
+}
+
+/* page details */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.title {
+    color: #fff;
+    font-weight: 400;
+    font-size: 2em;
+    text-align: center;
+}
+
+.details {
+    display: flex;
+    width: 100%;
+}
+
+.image {
+    width: 100%;
+}
+
+
+.details__card {
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__table,
+.table__row, 
+.table__data,
+.card__subtitle,
+.types {
+    background-color: #982c2c;
+}
+
+.card__table {
+    color: #fff;
+    width: 100%;
+}
+
+.card__subtitle {
+    font-size: 1.2em;
+    padding: 1rem 0;
+}
+
+.types,
+.table__row {
+    flex-direction: row;
+}
+
+.table__row {
+    justify-content: space-between;
+}
+
+.table__data {
+    padding: 0.2rem;
+}
+
+.value {
+    text-align: right;
+    width: 30px;
+    text-align: center;
+}
+
+.stat {
+    width: 105px;
+}
+
+.type {
+    margin: 0 1rem;
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.bar {
+    background-color: #632b2b;
+    border-radius: 5px;
+    width: 150px;
+    height: 25px;
+}
+
+.bar--full {
+    position: absolute;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 5px 0 0 5px;
+}
+
+/* color types */
+
+.type--acier {
+    background-color: #aaaabb;
+}
+
+.type--combat {
+    background-color: #bb5544;
+}
+
+.type--dragon {
+    background-color: #7766ee;
+}
+
+.type--eau {
+    background-color: #339977;
+}
+
+.type--électrik {
+    background-color: #ffbb33;
+}
+
+.type--feu {
+    background-color: #ff4422;
+}
+
+.type--glace {
+    background-color: #77ddff;
+}
+
+.type--insecte {
+    background-color: #aabb22;
+}
+
+.type--normal {
+    background-color: #bbaabb;
+}
+
+.type--plante {
+    background-color: #77cc55;
+}
+
+.type--poison {
+    background-color: #aa5599;
+}
+
+.type--psy {
+    background-color: #ff5599;
+}
+
+.type--roche {
+    background-color: #bbaa66;
+}
+
+.type--sol {
+    background-color: #ddbb55;
+}
+
+.type--spectre {
+    background-color: #6666bb;
+}
+
+.type--ténèbres {
+    background-color: #665544;
+}
+
+.type--vol {
+    background-color: #6699ff;
 }
 
 /* footer */
 
 footer {
     align-items: center;
+    margin-top: 2rem;
 }
 
 footer a {
@@ -117,6 +286,35 @@ footer a {
     .card {
         width: 45%;
     }
+
+    .details {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .image__card {
+        width: 35%;
+        align-self: center;
+    }
+
+    .details__card {
+        width: 60%;
+        align-items: start;
+    }
+
+    .card__subtitle {
+        text-align: left;
+    }
+    
+
+    .bar {
+        width: 255px;
+    }
+    
+    .bar--full {
+        width: 100px;
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -124,5 +322,15 @@ footer a {
     .card {
         width: 30%;
     }
+
+    .details {
+        flex-direction: row;
+    }
+
+    .details__card {
+        width: 60%;
+        align-items: start;
+    }
+    
 
 }
