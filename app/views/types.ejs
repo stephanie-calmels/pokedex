@@ -1,0 +1,17 @@
+<%- include('./partials/header') %> 
+
+    <p class="text">Cliquez sur un type pour voir tous les Pokémon de ce type</p>
+
+    <section class="type__list">
+
+        <% types.forEach(element => { %>
+            <article class="type__article">
+                <a href="#" class="type__item type--<%= element.name.toLowerCase() %> ">
+                    <%= element.name %> 
+                </a>
+            </article>
+        <% }) %>
+        
+    </section>
+
+<%- include('./partials/footer') %> 

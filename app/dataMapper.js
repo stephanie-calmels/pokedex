@@ -14,6 +14,7 @@ const dataMapper = {
         client.query(`SELECT * FROM "pokemon" WHERE "id"=$1`, [id], (callback));
     },
 
+    // récupère les types du pokemon ciblé
     getPokemonTypes: (id, callback) => {
         client.query(`
         SELECT type.name AS type 
@@ -24,7 +25,13 @@ const dataMapper = {
         ON pokemon_type.type_id=type.id
         WHERE pokemon.id=$1`,
         [id], (callback));
+    },
+
+    // récupère tous les types
+    getAllTypes: (callback) => {
+        client.query(`SELECT * FROM "type"`, (callback))
     }
+
 };
 
 // exportation du dataMapper

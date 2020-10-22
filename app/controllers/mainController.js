@@ -9,7 +9,7 @@ const mainController = {
             if (error) {
                 return response.status(500).send(error);
             }
-            response.render('home', {
+            response.render('list', {
                 pokemons: results.rows
             });
         });
@@ -32,10 +32,21 @@ const mainController = {
                     pokemon,
                     types
                 });
-    
-            })
+            });
         });
 
+    },
+
+    // affichage des types
+    typePage: (request, response) => {
+        dataMapper.getAllTypes( (error, results) => {
+            if (error) {
+                return response.status(500).send(error);
+            }
+            response.render('types', {
+                types: results.rows
+            });
+        });
     }
 };
 

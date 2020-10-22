@@ -9,5 +9,8 @@ router.get('/', mainController.homePage);
 // détails d'un Pokémon
 router.get('/details/:id', mainController.pokemonPage);
 
+// affichage par type
+router.get('/type', mainController.typePage)
+
 //exportation su router
 module.exports = router;
