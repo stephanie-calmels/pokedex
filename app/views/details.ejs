@@ -18,7 +18,7 @@
                 <div class="types">
                     <% types.forEach(element => { %>
                         <span class="type type--<%= element.type.toLowerCase() %> ">
-                            <%= element.type %> 
+                            <a class="type__link type--<%= element.type.toLowerCase() %> "href="/filter/<%= element.type %>"><%= element.type %></a>
                         </span>                   
                     <% }) %>
                 </div>

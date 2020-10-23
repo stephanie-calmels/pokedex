@@ -17,7 +17,7 @@ const mainController = {
 
     // détails d'un Pokémon
     pokemonPage: (request, response) => {
-        const pokemonId = parseInt(request.params.id);
+        const pokemonId = parseInt(request.params.id, 10);
         dataMapper.getOnePokemon(pokemonId, (error, results) => {
             if (error) {
                 return response.status(500).send(error);
@@ -45,6 +45,19 @@ const mainController = {
             }
             response.render('types', {
                 types: results.rows
+            });
+        });
+    },
+
+    // affichage des Pokemon par type
+    filterPage: (request, response) => {
+        const type = request.params.type;
+        dataMapper.getPokemonByType(type, (error, results) => {
+            if (error) {
+                return response.status(500).send(error);
+            }
+            response.render('list', {
+                pokemons: results.rows
             });
         });
     }

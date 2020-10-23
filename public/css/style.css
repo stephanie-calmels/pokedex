@@ -75,7 +75,7 @@ li {
     background-color: #982c2c;
 }
 
-.card a {
+.card a:not(.type__link) {
     background-color: #982c2c;
     display: flex;
     flex-direction: column;
@@ -167,6 +167,10 @@ li {
     padding: 0.5rem;
     color: #fff;
     border-radius: 5px;
+}
+
+.type__link {
+    color: #fff;
 }
 
 .bars {

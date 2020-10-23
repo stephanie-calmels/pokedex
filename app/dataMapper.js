@@ -30,6 +30,18 @@ const dataMapper = {
     // récupère tous les types
     getAllTypes: (callback) => {
         client.query(`SELECT * FROM "type"`, (callback))
+    },
+
+    getPokemonByType: (type, callback) => {
+        client.query(`
+        SELECT pokemon.* 
+        FROM pokemon 
+        JOIN pokemon_type 
+        ON pokemon.numero=pokemon_type.pokemon_numero
+        JOIN type 
+        ON pokemon_type.type_id=type.id
+        WHERE type.name=$1`,
+        [type], (callback));
     }
 
 };

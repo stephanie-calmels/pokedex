@@ -6,7 +6,7 @@
 
         <% types.forEach(element => { %>
             <article class="type__article">
-                <a href="#" class="type__item type--<%= element.name.toLowerCase() %> ">
+                <a href="/filter/<%= element.name %>" class="type__item type--<%= element.name.toLowerCase() %> ">
                     <%= element.name %> 
                 </a>
             </article>
